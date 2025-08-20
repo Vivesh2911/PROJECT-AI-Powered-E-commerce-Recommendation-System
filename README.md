@@ -1,90 +1,154 @@
-PRD
-1. product categories i.e. ●
-●
-recommendation filter , data format
-Tech Stack: MERN, TensorFlow.js, OpenAI API
-Description: Build a personalized recommendation engine using AI to suggest products
-based on user preferences, browsing behavior, and purchase history. Integrate with the
-MERN stack to offer real-time recommendations in the shopping cart and product details
-pages.
-PRD:
-Objective:
-Create an AI-powered recommendation system integrated with an e-commerce platform to offer
-personalized suggestions to users based on their browsing history, purchase behavior, and
-preferences.
-Features:
-●
-Personalized product recommendations
-●
-Real-time recommendations on product pages and in the shopping cart
-●
-Machine learning algorithms to analyze user behavior
-●
-User profile management with AI-driven insights
-●
-Admin dashboard to track recommendation performance
-User Stories:
-●
-●
-As a user, I want to receive personalized product recommendations so I can discover
-products suited to my tastes.
-As an admin, I want to track the performance of recommendations and tweak algorithms
-for better results.
-Technical Requirements:
-●
-●
-●
-●
-●
-Frontend: React.js, Redux for state management
-Backend: Node.js, Express.js
-Database: MongoDB
-AI/ML: TensorFlow.js, Scikit-learn
-AI Model: Collaborative filtering, content-based filtering
-Integration:
-●
-●
-Integrate with existing product catalog.
-Real-time product recommendations based on user interactions.
-Architecture Overview:
-●
-●
-●
-Frontend: React.js (UI), Redux (State Management)
-Backend: Node.js with Express.js (API)
-Microservices:
-○
-Recommendation Engine: AI-driven service for generating product
-recommendations.
-○
-○
-User Data Service: Manages user data, preferences, and browsing history.
-Product Service: Handles product data and categorization.
-Folder Structure:
+
+
+# 🛒 AI-Powered E-commerce Recommendation System
+
+An AI-driven recommendation engine for e-commerce platforms, built with the **MERN stack**, **TensorFlow\.js**, and **OpenAI API**. It provides **personalized product recommendations** in real-time based on user preferences, browsing history, and purchase behavior.
+
+---
+
+## 🚀 Features
+
+* ✅ Personalized product recommendations
+* ✅ Real-time suggestions on product details and shopping cart pages
+* ✅ AI/ML models for collaborative & content-based filtering
+* ✅ User profile management with AI-driven insights
+* ✅ Admin dashboard to monitor recommendation performance
+
+---
+
+## 📂 Project Structure
+
+```
 /ecommerce-recommendation
 |-- /client (React Frontend)
-| |-- /public
-| |-- /src
-| | |-- /components
-| | |-- /redux
-| | |-- /services
-| |-- package.json
+|   |-- /public
+|   |-- /src
+|   |   |-- /components
+|   |   |-- /redux
+|   |   |-- /services
+|   |-- package.json
 |
 |-- /server (Node.js Backend)
-| |-- /api
-| | |-- /routes
-| | |-- /controllers
-| | |-- /models
-| | |-- /middlewares
-| | |-- /services (Recommendation Engine Microservice)
-| |-- /microservices
-| | |-- /recommendation
-| | |-- /user-data
-| | |-- /product-service
-| |-- server.js
-| |--
-.env
+|   |-- /api
+|   |   |-- /routes
+|   |   |-- /controllers
+|   |   |-- /models
+|   |   |-- /middlewares
+|   |   |-- /services (Recommendation Engine Microservice)
+|   |-- /microservices
+|   |   |-- /recommendation
+|   |   |-- /user-data
+|   |   |-- /product-service
+|   |-- server.js
+|   |-- .env
 |
 |-- /database
-| |-- /models
+|   |-- /models
+|
 |-- package.json
+```
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+* React.js
+* Redux (state management)
+
+**Backend**
+
+* Node.js
+* Express.js
+
+**Database**
+
+* MongoDB
+
+**AI/ML**
+
+* TensorFlow\.js
+* Scikit-learn
+* OpenAI API
+
+---
+
+## 📊 Recommendation Models
+
+* **Collaborative Filtering** → Suggests products based on user similarity & purchase history.
+* **Content-Based Filtering** → Suggests products based on product attributes and user preferences.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/ecommerce-recommendation.git
+cd ecommerce-recommendation
+```
+
+### 2️⃣ Install Dependencies
+
+For frontend:
+
+```bash
+cd client
+npm install
+```
+
+For backend:
+
+```bash
+cd ../server
+npm install
+```
+
+### 3️⃣ Environment Variables
+
+Create a `.env` file inside `/server` and add:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+OPENAI_API_KEY=your_openai_api_key
+PORT=5000
+```
+
+### 4️⃣ Run the Project
+
+Run backend:
+
+```bash
+cd server
+npm start
+```
+
+Run frontend:
+
+```bash
+cd client
+npm start
+```
+
+The app will run at:
+👉 Frontend: `http://localhost:3000`
+👉 Backend: `http://localhost:5000`
+
+---
+
+## 📈 Future Enhancements
+
+* Add **hybrid recommendation model** combining collaborative + content-based filtering
+* Use **GraphQL** for more efficient API queries
+* Add **real-time analytics dashboard** for admins
+
+---
+
+## 👨‍💻 Author
+
+Developed by Vivesh 🚀
+
+---
+
